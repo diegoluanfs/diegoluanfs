@@ -9,3 +9,5 @@
 🤝 Estou aberto a oportunidades de networking, colaboração e aprendizado contínuo. Seja para discutir projetos desafiadores, explorar novas oportunidades ou contribuir para iniciativas que impactam positivamente a sociedade, estou pronto para novas experiências!
 
 Vamos conectar nossas paixões e construir algo extraordinário! 🚀🌍
+
+[Projeto Educar 2024](https://github.com/projetoeducar2024) | [Perfil](profile.php?id=61556983340288) | [Canal no YouTube](https://www.youtube.com/channel/UCfCfQNJeBGPI3WP0iQrUCMA)
