@@ -39,6 +39,20 @@
   </script>
 
   <title>Diego L. F. S.: About Me</title>
+
+  <style>
+    /* Estilo personalizado para o input */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 50%;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    }
+  </style>
 </head>
 
 <body>
@@ -153,37 +167,39 @@
   </nav>
   <main>
     <section id="about" class="container">
-      <div class="intro-container">
-        <div class="intro-image">
-          <img src="./static/images/about/portrait.png" alt="Diego L. F. S.">
-        </div>
-        <div class="intro">
-          <h1 class="section-title">Por que fazer parte do time?</h1>
-          <p class="bold-text"> 
-            Acredito que todos temos potenciais únicos e não necessariamente envolvendo a tecnologia.
-          </p>
-        </div>
+      <h1 class="section-title">Por que fazer parte do time?</h1>
+      <p class="bold-text">
+        Venha fazer parte de um time que acredita no potencial único de cada indivíduo. Aqui, buscamos explorar o melhor de cada pessoa, não apenas em tecnologia, mas em todas as suas habilidades e talentos. Juntos, podemos alcançar objetivos maiores e impactar positivamente o mundo ao nosso redor.
+      </p>      
+        
+      <div class="section-link container inner-container">
+        <form id="registrationForm">
+          <label for="username" class="section-link container inner-container"><p class="bold-text"> 
+            Username:
+          </p></label>
+          <input type="text" id="username" name="username" required>
+          <br><br>
+          <label for="email" class="section-link container inner-container"><p class="bold-text"> 
+            Email:
+          </p></label>
+          <input type="email" id="email" name="email" required>
+          <br><br>
+          <label for="cellphone" class="section-link container inner-container"><p class="bold-text"> 
+            Cellphone:
+          </p></label>
+          <input type="text" id="cellphone" name="cellphone" required>
+          <br><br>
+          <label for="password" class="section-link container inner-container"><p class="bold-text"> 
+            Password:
+          </p></label>
+          <input type="password" id="password" name="password" required>
+          <br><br>
+          <button type="button" id="submitButton" class="link-btn">Cadastrar</button>
+        </form>
       </div>
+
     </section>
     
-    <div class="section-link container inner-container">
-      <form id="registrationForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
-        <label for="cellphone">Cellphone:</label>
-        <input type="text" id="cellphone" name="cellphone" required>
-        <br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <br><br>
-        <button type="button" id="submitButton" class="link-btn">Cadastrar</button>
-      </form>
-    </div>
-
   </main>
   <div class="page-nav container">
     <a href="/diegoluanfs">&#8592; Home</a>
