@@ -10,6 +10,36 @@
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
+.projeto__imagem-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .projeto__imagem-mobile {
+        display: block;
+        width: 100%;
+        max-width: 100vw;
+        height: auto;
+        border-radius: 8px;
+        border: 2px solid var(--cor-terciaria);
+        margin: 16px 0;
+    }
+    #previewImagem {
+        display: none;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -23,11 +53,13 @@ body{
 
 .cabecalho{
     padding: 2% 0% 0% 15%;
+    position: relative;
 }
 
 .cabecalho__menu{
     display: flex;
     gap: 80px;
+    transition: right 0.3s;
 }
 
 .cabecalho__menu__link{
@@ -65,6 +97,20 @@ body{
 .apresentacao__conteudo__texto{
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
+}
+
+/* ------------------ RESPONSIVIDADE ------------------ */
+@media (max-width: 768px) {
+    .apresentacao {
+        flex-direction: column;
+        padding: 8% 5%;
+        gap: 32px;
+    }
+    .apresentacao__conteudo {
+        width: 100%;
+        align-items: flex-start;
+    }
+    /* Remove a regra global que escondia todas as imagens em .apresentacao */
 }
 
 /* ------------------ REDES SOCIAIS ------------------ */
@@ -109,4 +155,92 @@ body{
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 400;
+}
+
+/* Menu Hamburguer - Escondido em desktop */
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 10;
+}
+.menu-hamburguer span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: var(--cor-terciaria);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 2% 0 0 0;
+    }
+    .menu-hamburguer {
+        display: flex;
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        z-index: 100;
+    }
+    .cabecalho__menu {
+        flex-direction: column;
+        gap: 32px;
+        background: var(--cor-primaria);
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 70vw;
+        height: 100vh;
+        padding: 80px 24px 24px 24px;
+        box-shadow: -2px 0 12px rgba(0,0,0,0.2);
+        z-index: 9;
+        transition: left 0.3s;
+    }
+    .cabecalho__menu.menu-aberto {
+        left: 0;
+    }
+        /* Centraliza todos os elementos em telas pequenas */
+        .apresentacao__conteudo,
+        .apresentacao__conteudo > *,
+        .apresentacao__links,
+        .apresentacao__links__icones,
+        .apresentacao__conteudo__lista,
+        .apresentacao__conteudo__texto,
+        .apresentacao__conteudo__titulo,
+        .apresentacao__conteudo__subtitulo,
+        .rodape {
+            text-align: center !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .apresentacao__conteudo__lista {
+            padding: 0;
+        }
+        .apresentacao__links__icones {
+            flex-direction: row;
+            justify-content: center;
+        }
+        img, svg, video, canvas, audio, iframe, embed, object {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 95vw;
+            max-height: 50vh;
+            box-sizing: border-box;
+        }
 }

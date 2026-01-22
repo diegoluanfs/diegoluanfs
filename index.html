@@ -9,7 +9,12 @@
 </head>
 <body>
     <header class="cabecalho">
-        <nav class="cabecalho__menu">
+        <button class="menu-hamburguer" aria-label="Abrir menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="cabecalho__menu" id="menuNav">
             <a class="cabecalho__menu__link" href="index.html">Home</a>
             <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
             <a class="cabecalho__menu__link" href="projects.html">Projetos</a>
@@ -19,7 +24,7 @@
     <main class="apresentacao">
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao__conteudo__titulo">
-                Desenvolvedor .NET focado em soluções eficientes e escaláveis
+                Dev .NET focado em soluções eficientes e escaláveis
             </h1>
 
             <p class="apresentacao__conteudo__texto">
@@ -64,5 +69,11 @@
     <footer class="rodape">
         <p>Desenvolvido por Diego Luan.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('menuNav');
+            nav.classList.toggle('menu-aberto');
+        }
+    </script>
 </body>
 </html>
