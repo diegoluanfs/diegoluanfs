@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link{
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao__conteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo{
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto{
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+/* ------------------ REDES SOCIAIS ------------------ */
+
+.apresentacao__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+/* ÍCONES LADO A LADO */
+.apresentacao__links__icones {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+/* ESTILO DOS ÍCONES */
+.apresentacao__links__icones img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(42%) sepia(98%) saturate(2000%) hue-rotate(180deg);
+    transition: transform .2s;
+}
+
+.apresentacao__links__icones img:hover {
+    transform: scale(1.15);
+}
+
+/* RESET BÁSICO --------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* CONTAINER GERAL ----------------------------------------*/
+.projetos-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* TÍTULO PRINCIPAL ---------------------------------------*/
+.projetos-titulo {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: #58a6ff;
+}
+
+/* LISTA DE PROJETOS --------------------------------------*/
+.projeto {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.projeto:hover {
+    transform: translateY(-3px);
+    border-color: #58a6ff;
+}
+
+/* TÍTULO DO PROJETO --------------------------------------*/
+.projeto h2 {
+    font-size: 1.4rem;
+    color: #79c0ff;
+    margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO ----------------------------------------------*/
+.projeto p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #c9d1d9;
+}
+
+/* LINKS ---------------------------------------------------*/
+.projeto a {
+    display: inline-block;
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.projeto a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE -----------------------------------------*/
+@media (max-width: 600px) {
+    .projetos-titulo {
+        font-size: 1.8rem;
+    }
+
+    .projeto {
+        padding: 15px;
+    }
+
+    .projeto h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}

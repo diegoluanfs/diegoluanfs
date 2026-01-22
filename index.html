@@ -1,125 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Diego Luan - Desenvolvedor Full Stack">
-    <title>Diego Luan - Portfólio 2026</title>
-    <link rel="stylesheet" href="static/css/index.css">
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">Diego Luan</div>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
+    <header class="cabecalho">
+        <nav class="cabecalho__menu">
+            <a class="cabecalho__menu__link" href="index.html">Home</a>
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="projects.html">Projetos</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <h1>Olá, eu sou Diego Luan</h1>
-        <p>Desenvolvedor Full Stack | Criando soluções digitais</p>
-        <a href="#projects" class="btn">Ver Projetos</a>
-    </section>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+            <h1 class="apresentacao__conteudo__titulo">
+                Desenvolvedor .NET focado em soluções eficientes e escaláveis
+            </h1>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>Sobre Mim</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Sou um desenvolvedor apaixonado por tecnologia e inovação, com experiência em criar soluções web modernas e eficientes.</p>
-                <p>Ao longo da minha carreira, trabalhei com diversas tecnologias e frameworks, sempre buscando aprender e evoluir constantemente.</p>
-                <p>Atualmente, meu foco é desenvolver aplicações que, além de funcionarem com excelência, sejam acessíveis financeiramente e ofereçam uma experiência de usuário de alto nível.</p>
-            </div>
-            <div>
-                <h3 style="margin-bottom: 1rem; color: var(--secondary-color);">Habilidades</h3>
-                <div class="skills">
-                    <span class="skill-tag">.NET</span>
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">GO</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">APIs REST</span>
-                </div>
+            <p class="apresentacao__conteudo__texto">
+                Sou Diego Luan, desenvolvedor backend especializado em C#, .NET e criação de APIs REST. Trabalho com
+                arquiteturas enxutas, microsserviços e bancos relacionais e não-relacionais. Priorizar simplicidade,
+                performance e organização é o centro do meu processo.
+            </p>
+
+            <p class="apresentacao__conteudo__texto">
+                Estou evoluindo para o full-stack com Angular e buscando oportunidades internacionais onde eu possa
+                contribuir com soluções diretas, seguras e bem estruturadas.
+            </p>
+
+            <h2 class="apresentacao__conteudo__subtitulo">Stacks</h2>
+            <ul class="apresentacao__conteudo__lista">
+                <li>.NET / C#</li>
+                <li>APIs REST</li>
+                <li>SQL Server, PostgreSQL, Oracle</li>
+                <li>Docker, Git, RabbitMQ</li>
+                <li>Angular (aprendizado)</li>
+            </ul>
+
+            <div class="apresentacao__links">
+            <h2 class="apresentacao__links__subtitulo">Redes</h2>
+
+            <div class="apresentacao__links__icones">
+                <a href="https://github.com/diegoluanfs">
+                    <img src="./assets/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/diego-luan/">
+                    <img src="./assets/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="Curriculo-Diego-Luan.pdf">
+                    <img src="./assets/cv.png" alt="Currículo PDF">
+                </a>
+                <a href="mailto:diegoluanfs@gmail.com">
+                    <img src="./assets/email.png" alt="E-mail">
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <h2>Meus Projetos</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">🤝</div>
-                <div class="project-content">
-                    <h3>Projeto Social</h3>
-                    <p>
-                      Sistema web desenvolvido para apoiar iniciativas sociais, permitindo o cadastro, acompanhamento e gestão de crianças e famílias em situação de vulnerabilidade. A solução oferece controle centralizado de atendimentos, geração de relatórios estatísticos, monitoramento de indicadores sociais e ferramentas para fortalecer o acolhimento e a educação comunitária, facilitando a tomada de decisões baseada em dados.
-                    </p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Saiba mais →</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">⚖️</div>
-                <div class="project-content">
-                    <h3>Plataforma de Gestão</h3>
-                    <p>
-                      Plataforma web sendo desenvolvida para otimizar a gestão de atividades profissionais, automatizando tarefas rotineiras e centralizando informações essenciais. O sistema proporciona controle avançado de processos, geração de relatórios inteligentes e integração com outras ferramentas, promovendo maior eficiência, agilidade e produtividade no dia a dia dos profissionais.
-                    </p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">💬</div>
-                <div class="project-content">
-                    <h3>Assistente Conversacional</h3>
-                    <p>
-                      Desenvolvimento de uma solução SaaS com assistente virtual inteligente, capaz de interpretar dados fornecidos pelo usuário para oferecer respostas personalizadas, automatizar atendimentos e adaptar-se a diferentes demandas. A plataforma proporciona integração flexível, escalabilidade e eficiência, tornando a experiência de interação mais ágil e assertiva em múltiplos cenários de uso.
-                    </p>
-                    <div class="project-links">
-                        <a href="#" target="_blank">Saiba mais →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Entre em Contato</h2>
-        <div class="contact-content">
-            <p>Estou sempre aberto a novos projetos e oportunidades. Vamos conversar!</p>
-            <div class="contact-links">
-                <a href="mailto:contato@diegoluan.com">📧 Email</a>
-                <a href="https://github.com/diegoluanfs" target="_blank">💻 GitHub</a>
-                <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
-                <a href="https://twitter.com" target="_blank">🐦 Twitter</a>
-            </div>
-        </div>
-    </section>
+        <img src="./assets/imagem.png" alt="Foto de Diego Luan programando">
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Diego Luan. Todos os direitos reservados.</p>
+    <footer class="rodape">
+        <p>Desenvolvido por Diego Luan.</p>
     </footer>
-
-    <script src="static/js/index.js"></script>
 </body>
 </html>
