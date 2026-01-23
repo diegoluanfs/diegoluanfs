@@ -6,7 +6,7 @@
 
 ## Sobre o projeto
 
-Este é o portfólio pessoal de Diego Luan, desenvolvedor backend especializado em C#, .NET e APIs REST. O objetivo é apresentar stacks, experiências e projetos de forma moderna, responsiva e objetiva.
+Meu portfólio pessoal, desenvolvedor backend especializado em C#, .NET e APIs REST. O objetivo é apresentar stacks, experiências e projetos de forma moderna, responsiva e objetiva.
 
 - Foco em soluções simples, performáticas e organizadas
 - Experiência com microsserviços, monolitos, bancos de dados relacionais e não-relacionais

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-
     <header class="cabecalho">
         <button class="menu-hamburguer" aria-label="Abrir menu" onclick="toggleMenu()">
             <span></span>
@@ -23,72 +22,61 @@
     </header>
 
     <main class="apresentacao">
-
         <!-- COLUNA ESQUERDA -->
         <section class="apresentacao__conteudo">
-
             <h1 class="apresentacao__conteudo__titulo">Projetos</h1>
-
             <p class="apresentacao__conteudo__texto">
                 Aqui estão alguns dos projetos que desenvolvi utilizando .NET, C#, APIs, SQL,
                 mensageria e arquitetura limpa. Passe o mouse sobre cada projeto para visualizar uma prévia.
             </p>
 
-              <div class="projeto"
-                  onmouseover="trocarImagem('assets/projeto1.png')"
-                  onmouseout="resetarImagem()">
+            <div class="projeto" onmouseover="trocarImagem('assets/projeto1.png')" onmouseout="resetarImagem()">
                 <h2 class="apresentacao__conteudo__subtitulo">Sistema Jurídico</h2>
                 <p class="apresentacao__conteudo__texto">
                     Plataforma inteligente para escritórios de advocacia com automações em .NET.
                 </p>
                 <img class="projeto__imagem-mobile" src="./assets/projeto1.png" alt="Sistema Jurídico">
                 <div class="apresentacao__links__icones">
-                    <a href="https://github.com/diegoluanfs" target="_blank">
+                    <a href="https://github.com/diegoluanfs">
                         <img src="./assets/github.png" alt="GitHub">
                     </a>
                 </div>
             </div>
 
-              <div class="projeto"
-                  onmouseover="trocarImagem('assets/projeto2.png')"
-                  onmouseout="resetarImagem()">
+            <div class="projeto" onmouseover="trocarImagem('assets/projeto2.png')" onmouseout="resetarImagem()">
                 <h2 class="apresentacao__conteudo__subtitulo">Sistema Caridade</h2>
                 <p class="apresentacao__conteudo__texto">
                     Sistema de gestão de eventos, doações e cadastro social.
                 </p>
                 <img class="projeto__imagem-mobile" src="./assets/projeto2.png" alt="Sistema Caridade">
                 <div class="apresentacao__links__icones">
-                    <a href="https://github.com/diegoluanfs" target="_blank">
+                    <a href="https://github.com/diegoluanfs">
                         <img src="./assets/github.png" alt="GitHub">
                     </a>
                 </div>
             </div>
 
-              <div class="projeto"
-                  onmouseover="trocarImagem('assets/projeto3.png')"
-                  onmouseout="resetarImagem()">
+            <div class="projeto" onmouseover="trocarImagem('assets/projeto3.png')" onmouseout="resetarImagem()">
                 <h2 class="apresentacao__conteudo__subtitulo">Portfólio</h2>
                 <p class="apresentacao__conteudo__texto">
                     Página desenvolvida com HTML e CSS seguindo boas práticas de UI.
                 </p>
                 <img class="projeto__imagem-mobile" src="./assets/projeto3.png" alt="Portfólio">
                 <div class="apresentacao__links__icones">
-                    <a href="https://github.com/diegoluanfs/diegoluanfs.github.io" target="_blank">
+                    <a href="https://github.com/diegoluanfs/diegoluanfs.github.io">
                         <img src="./assets/github.png" alt="GitHub">
                     </a>
                 </div>
             </div>
-
         </section>
 
         <!-- COLUNA DIREITA -->
         <section>
             <img id="previewImagem"
-                 src="./assets/projeto3.png"
-                 alt="Prévia do projeto"
-                 style="width: 500px; border-radius: 8px; border: 2px solid var(--cor-terciaria); opacity: 0.9; transition: 0.3s;">
+                src="./assets/projeto3.png"
+                alt="Prévia do projeto"
+                style="width: 500px; border-radius: 8px; border: 2px solid var(--cor-terciaria); opacity: 0.9; transition: 0.3s;">
         </section>
-
     </main>
 
     <footer class="rodape">
@@ -102,15 +90,12 @@
 
         function trocarImagem(src) {
             if (trocando) return; // evita spam de animação
-
             trocando = true;
             preview.style.opacity = "0"; // fade out
-
             setTimeout(() => {
                 preview.src = src;
                 preview.style.transform = "scale(1.02)";
                 preview.style.opacity = "1"; // fade in
-
                 setTimeout(() => {
                     trocando = false;
                 }, 500);
@@ -119,15 +104,12 @@
 
         function resetarImagem() {
             if (trocando) return;
-
             trocando = true;
             preview.style.opacity = "0";
-
             setTimeout(() => {
                 preview.src = defaultImage;
                 preview.style.transform = "scale(1)";
                 preview.style.opacity = "1";
-
                 setTimeout(() => {
                     trocando = false;
                 }, 500);
