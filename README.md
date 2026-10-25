@@ -1,43 +1,27 @@
-# Portfólio • Diego Luan
+# Diego Luan | Portfólio profissional
 
-[![Acesse o site](https://img.shields.io/badge/Ver%20Online-22D4FD?style=for-the-badge&logo=github)](https://diegoluanfs.github.io/diegoluanfs/index.html)
+Website novo, estático e responsivo voltado a recrutadores, implementado do zero em HTML, CSS e JavaScript.
 
-![Preview do site](./assets/screenshot.png)
+## Publicação via GitHub Pages
 
-## Sobre o projeto
+1. Faça backup caso queira preservar seu site anterior.
+2. Copie `index.html`, `styles.css`, `script.js` e a pasta `assets/` para a raiz do repositório `diegoluanfs/diegoluanfs`.
+3. Remova ou arquive os arquivos antigos não mais usados (`about.html`, `projects.html`, pastas antigas de estilos etc.).
+4. Confirme em **Settings → Pages** que a fonte é **Deploy from a branch**, `main`, `/ (root)`.
+5. Abra `https://diegoluanfs.github.io/diegoluanfs/`.
 
-Meu portfólio pessoal, desenvolvedor backend especializado em C#, .NET e APIs REST. O objetivo é apresentar stacks, experiências e projetos de forma moderna, responsiva e objetiva.
+## Conteúdo e critérios
 
-- Foco em soluções simples, performáticas e organizadas
-- Experiência com microsserviços, monolitos, bancos de dados relacionais e não-relacionais
-- Interface responsiva e navegação mobile-friendly
+- Experiências de desenvolvimento: Prefeitura de Silveira Martins, Digitalk CXM, Zip4Me. Os QR Codes SVG são arquivos locais e apontam para páginas públicas institucionais.
+- FISMA é citada no histórico profissional, sem ser apresentada como case de desenvolvimento.
+- Aplicativos: ColorRush, StackFactory, Astro Horóscopo, PetMatch. Nenhum link de teste fechado foi inventado.
+- Tools: QR Code Generator consta apenas como **planejado**.
+- Não há bibliotecas JavaScript externas nem backend; as fontes usam Google Fonts com fallback local.
 
-## Stacks & Ferramentas
+## Atualizar links de testes
 
-- .NET / C#
-- APIs REST
-- SQL Server, PostgreSQL, Oracle
-- Docker, Git, RabbitMQ
-- Angular (aprendizado)
+Quando links de adesão oficiais estiverem disponíveis, edite os rodapés de cards em `index.html`. Inscrição/convite e acesso ao teste são etapas distintas; o usuário deve estar autorizado no Google Play para instalar. Gere códigos SVG para os links oficiais e acrescente-os apenas então.
 
-## Como acessar
+## Observações
 
-O portfólio está publicado em:
-
-👉 [https://diegoluanfs.github.io/diegoluanfs/index.html](https://diegoluanfs.github.io/diegoluanfs/index.html)
-
-## Projetos em destaque
-
-- **Sistema Jurídico**: Plataforma para escritórios de advocacia com automações em .NET
-- **Sistema Caridade**: Gestão de eventos, doações e cadastro social
-- **Portfólio**: Página desenvolvida com HTML e CSS seguindo boas práticas de UI
-
-## Contato
-
-- [LinkedIn](https://www.linkedin.com/in/diego-luan/)
-- [GitHub](https://github.com/diegoluanfs)
-- [E-mail](mailto:diegoluanfs@gmail.com)
-
----
-
-> Desenvolvido por Diego Luan
+Os gráficos dos apps são composições vetoriais em HTML/CSS ilustrativas, não screenshots reais. O link `GitHub` no ColorRush aponta apenas para o perfil até haver um endereço público confirmado do projeto. Revise status dos testes conforme a situação atual no Play Console.
