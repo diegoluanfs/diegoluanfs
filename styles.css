@@ -17,3 +17,50 @@
   .experience-meta{flex-wrap:wrap;}
   .hero-actions .button{width:100%;}
 }
+
+/* QRLivre em producao: card responsivo e CTA principal */
+.tool-card-live{align-items:center;gap:28px}
+.tool-card-live .tool-copy{min-width:0}
+.tool-card-live .tool-chips{margin-top:18px}
+.tool-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:24px}
+.tool-repository{color:var(--lime);font-size:13px;font-weight:700}
+.tool-repository:hover{text-decoration:underline}
+.tool-access{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;flex:0 0 170px;text-align:center}
+.tool-access img{display:block;width:136px;height:136px;background:#fff;padding:8px;border-radius:9px;max-width:100%}
+.tool-status-live{color:var(--lime);border-color:#59784b;background:#1a3026}
+.tool-domain{color:var(--muted);font-size:12px;overflow-wrap:anywhere}
+@media(max-width:720px){.tool-card-live{display:grid;grid-template-columns:60px minmax(0,1fr);gap:15px}.tool-card-live .tool-copy{grid-column:2;grid-row:1}.tool-card-live .tool-icon{grid-column:1;grid-row:1;align-self:start}.tool-access{grid-column:1/-1;flex-basis:auto;display:flex;flex-direction:row;justify-content:flex-start;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px;gap:12px}.tool-access img{width:104px;height:104px}.tool-actions{gap:14px}.tool-actions .button{width:100%}.tool-status-live{margin-left:0}.tool-domain{font-size:11px}}
+@media(max-width:380px){.tool-card-live{grid-template-columns:1fr}.tool-card-live .tool-icon,.tool-card-live .tool-copy{grid-column:1;grid-row:auto}.tool-access{grid-column:1}}
+
+/* QR Codes dos aplicativos e QRLivre Web / Android */
+.app-qr{display:flex;align-items:center;gap:16px;min-width:0;margin-top:22px;padding:14px;border:1px solid #344459;border-radius:10px;background:#152234}
+.app-qr img{display:block;flex:0 0 102px;width:102px;height:102px;padding:6px;border-radius:7px;background:#fff;object-fit:contain}
+.app-qr span{color:#becddd;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.app-footer{flex-wrap:wrap}
+.art-qrlivre{background:radial-gradient(circle at 55% 42%,#1b5d58,#101c34 76%)}
+.qrlivre-symbol{color:#b9f273;font-size:130px;line-height:1;transform:rotate(-8deg);text-shadow:0 10px 45px #a6ef8244}
+@media(max-width:380px){.app-qr{gap:10px;padding:10px}.app-qr img{flex-basis:86px;width:86px;height:86px}.app-body{padding:18px}.app-title-row{flex-wrap:wrap}.app-title-row h3{font-size:22px}}
+
+/* QR Codes interativos e acessíveis */
+.qr-clickable{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.qr-clickable:hover{transform:translateY(-3px);box-shadow:0 0 0 2px rgba(190,240,120,.5)}
+.qr-clickable:focus-visible{outline:3px solid var(--lime);outline-offset:4px}
+.qr-clickable img{display:block;max-width:100%;height:auto}
+@media(prefers-reduced-motion:reduce){.qr-clickable{transition:none}}
+
+/* Clickable full-card surfaces: link overlay with independent secondary links. */
+.experience-card,.app-card,.tool-card-live{position:relative}
+.experience-card:has(.card-primary-link),.app-card:has(.card-primary-link),.tool-card-live{cursor:pointer;transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.experience-card:has(.card-primary-link):hover,.app-card:has(.card-primary-link):hover,.tool-card-live:hover{border-color:#a3cf75;box-shadow:0 12px 36px rgba(0,0,0,.18)}
+/* Position overlay relative to the ARTICLE, not to the anchor. */
+.card-primary-link::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+/* Explicit, secondary destinations stay above the overlay and keep their own actions. */
+.experience-card .qr-panel a:not(.card-primary-link),
+.app-card .app-footer a,
+.tool-card-live .tool-repository,
+.tool-card-live .tool-access a{position:relative;z-index:2}
+/* Keyboard focus remains visible around the whole card. */
+.experience-card:has(.card-primary-link:focus-visible),
+.app-card:has(.card-primary-link:focus-visible),
+.tool-card-live:has(.card-primary-link:focus-visible){outline:3px solid var(--lime);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.experience-card,.app-card,.tool-card-live{transition:none}}
