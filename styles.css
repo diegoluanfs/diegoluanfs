@@ -64,3 +64,52 @@
 .app-card:has(.card-primary-link:focus-visible),
 .tool-card-live:has(.card-primary-link:focus-visible){outline:3px solid var(--lime);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.experience-card,.app-card,.tool-card-live{transition:none}}
+
+
+/* 2026-10: correção de largura real e espaços publicitários */
+html{max-width:100%;overflow-x:clip}
+body{max-width:100%;overflow-x:clip}
+img,svg,video,iframe{max-width:100%}
+.hero,.about-layout,.experience-card,.app-grid,.app-card,.tool-card,.tool-copy,.contact-layout,.hero-copy{min-width:0}
+.hero-art{min-width:0;max-width:100%;overflow:hidden}
+.code-window{min-width:0;max-width:calc(100% - 12px)}
+.code-window pre{max-width:100%;overflow-x:auto;overflow-y:hidden;white-space:pre}
+.experience-content,.app-body,.tool-copy,.contact-layout>*,.section-heading{min-width:0;overflow-wrap:break-word}
+.app-qr>a{flex:0 0 auto;min-width:0}
+.app-qr span{min-width:0}
+.tool-card-live .tool-access{min-width:0;max-width:100%}
+.ad-section{padding-block:16px 26px}
+.ad-slot{width:100%;min-width:0;min-height:112px;border:1px dashed #36455b;border-radius:12px;background:linear-gradient(135deg,rgba(19,31,45,.65),rgba(15,25,40,.75));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:18px;color:#8292a8}
+.ad-slot-label{font:700 10px var(--display);letter-spacing:.18em}
+.ad-slot-note{font-size:12px}
+@media(max-width:720px){
+  /* O padding é interno; a largura externa sempre é a viewport. */
+  .shell{width:100%;max-width:100%;margin-inline:auto;padding-inline:16px}
+  .hero.shell{padding:52px 16px 54px}
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .hero h1{font-size:clamp(38px,10vw,58px);overflow-wrap:normal;word-break:normal;letter-spacing:-.055em}
+  .hero-art{height:300px;margin-top:18px}
+  .orbit-1{width:min(320px,95%);height:auto;aspect-ratio:1}
+  .orbit-2{width:min(240px,72%);height:auto;aspect-ratio:1}
+  .code-window{width:calc(100% - 16px);transform:rotate(-1deg)}
+  .code-window pre{font-size:clamp(9px,2.6vw,11px);padding:14px 12px}
+  .section{padding-block:65px}
+  .section-heading h2{font-size:clamp(30px,8vw,42px);overflow-wrap:normal}
+  .experience-card{padding:20px}
+  .app-body{min-width:0}
+  .app-art-name{font-size:clamp(25px,8vw,35px);overflow-wrap:anywhere;max-width:calc(100% - 36px)}
+  .app-qr{flex-wrap:wrap}
+  .tool-card-live{padding:20px}
+  .tool-copy{overflow-wrap:anywhere}
+  .contact-email{font-size:clamp(16px,4.5vw,25px)}
+  .ad-section{padding-block:8px 22px}
+  .ad-slot{min-height:110px}
+}
+@media(max-width:360px){
+  .shell{padding-inline:14px}
+  .hero.shell{padding-inline:14px}
+  .hero h1{font-size:36px}
+  .value-grid{grid-template-columns:1fr}
+  .experience-meta{flex-wrap:wrap}
+  .app-body{padding:17px}
+}
